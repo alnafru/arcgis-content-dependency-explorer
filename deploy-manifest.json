@@ -1,0 +1,18 @@
+{
+  "kind": "arcgis-nova-deployable-app",
+  "version": "0.1",
+  "generatedAt": "2026-10-28T16:10:54.992Z",
+  "title": "ArcGIS Content & Dependency Explorer",
+  "authMode": "oauth",
+  "entry": "index.html",
+  "sourceAppPath": "outputs/apps/2026-10-28T16-10-54-a6c29760-7a5c-47ed-be5a-2024f5353817/index.html",
+  "files": {
+    "app": "app.json",
+    "map": "map.json",
+    "runtime": "app.js",
+    "auth": "standalone-auth.js"
+  },
+  "portalUrl": "https://www.arcgis.com",
+  "appId": "t09LStzUuFnGlJRi",
+  "deploymentUrl": "https://alnafru.github.io/arcgis-content-dependency-explorer/"
+}

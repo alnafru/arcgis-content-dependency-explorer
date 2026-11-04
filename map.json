@@ -1,0 +1,33 @@
+{
+  "operationalLayers": [],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "world-hillshade-layer",
+        "showLegend": false,
+        "opacity": 1,
+        "title": "World Hillshade",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+        "visibility": true,
+        "layerType": "ArcGISTiledMapServiceLayer"
+      },
+      {
+        "id": "topo-vector-base-layer",
+        "opacity": 1,
+        "title": "World Topo",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/7dc6cea0b1764a1f9af2e679f642f0f5/resources/styles/root.json"
+      }
+    ],
+    "title": "Topographic"
+  },
+  "authoringApp": "ArcGIS API for JavaScript",
+  "authoringAppVersion": "5.1",
+  "spatialReference": {
+    "latestWkid": 3857,
+    "wkid": 102100
+  },
+  "timeZone": "system",
+  "version": "2.37"
+}

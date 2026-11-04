@@ -1,0 +1,144 @@
+{
+  "version": "0.3",
+  "kind": "app",
+  "generatedAt": "2026-10-28T16:10:55.000Z",
+  "item": {
+    "title": "ArcGIS Content & Dependency Explorer",
+    "subtitle": "Cuadro de mando para inventario, linaje e impacto"
+  },
+  "map": {
+    "type": "webmap",
+    "path": "./map.json"
+  },
+  "app": {
+    "template": "nova-app",
+    "preset": "dashboard",
+    "showHeader": true,
+    "theme": {
+      "mode": "light",
+      "accent": "default"
+    },
+    "layout": {
+      "header": {
+        "hidden": false,
+        "height": "100px",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "text",
+            "id": "dashboard-intro",
+            "content": "Selecciona cualquier elemento de tu organización y descubre qué utiliza, de qué depende y qué contenidos podrían verse afectados por un cambio.",
+            "format": "plain"
+          }
+        ]
+      },
+      "left": {
+        "hidden": false,
+        "width": "390px",
+        "title": "Inventario",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "content-inventory",
+            "title": "Contenido",
+            "icon": "table"
+          }
+        ]
+      },
+      "right": {
+        "hidden": false,
+        "width": "540px",
+        "title": "Análisis de linaje",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "dependency-explorer",
+            "title": "Detalle y relaciones",
+            "icon": "layers"
+          },
+          {
+            "type": "customMount",
+            "id": "content-assistant",
+            "title": "Pregunta sobre el contenido"
+          }
+        ]
+      },
+      "footer": {
+        "hidden": false,
+        "height": "56px",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "text",
+            "id": "architecture-note",
+            "content": "Fuente: ArcGIS Online · Lectura mediante la sesión autenticada · Sin mapa ni controles cartográficos.",
+            "format": "plain"
+          }
+        ]
+      }
+    },
+    "widgets": [],
+    "interactions": [],
+    "behaviors": [
+      {
+        "id": "dependency-explorer",
+        "label": "Inventario y linaje · títulos sin solapamientos",
+        "bundlePath": "./runtime/behaviors/dependency-explorer-f1e01b53b85c9cd2.js",
+        "sourceSha256": "f1e01b53b85c9cd298f5d297833ed3cef417b6e083d04f00393c783efffe7561",
+        "modulePaths": [
+          "esri/portal/Portal",
+          "esri/portal/PortalItem"
+        ],
+        "config": {
+          "defaultPageSize": 50,
+          "reverseScanLimit": 60
+        },
+        "mounts": [
+          "content-inventory",
+          "dependency-explorer"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-29T14:53:36.930Z"
+      },
+      {
+        "id": "content-assistant",
+        "label": "Asistente de consultas de contenido en lenguaje natural",
+        "bundlePath": "./runtime/behaviors/content-assistant-c107d3ce89943e17.js",
+        "sourceSha256": "c107d3ce89943e17514600cf9a8949da69e182398b0bb7581cfa97ccd1d1e936",
+        "modulePaths": [
+          "esri/portal/Portal"
+        ],
+        "config": {
+          "resultLimit": 8
+        },
+        "mounts": [
+          "content-assistant",
+          "dependency-explorer"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-10-29T15:00:46.608Z"
+      }
+    ]
+  },
+  "nova": {
+    "basename": "a6c29760-7a5c-47ed-be5a-2024f5353817",
+    "presentationMode": "app",
+    "ownedGraphicsLayerIds": [],
+    "origin": {
+      "portalUrl": "https://www.arcgis.com",
+      "mapId": "output-b20a338c-fdd2-418c-afde-cf947b7225fa",
+      "mapName": "New Conversation",
+      "viewMode": "2d",
+      "capturedAt": "2026-10-28T16:10:54.992Z"
+    },
+    "sourceSelection": {
+      "mode": "all"
+    },
+    "unsupportedLayers": [],
+    "degradedFeatures": []
+  }
+}
