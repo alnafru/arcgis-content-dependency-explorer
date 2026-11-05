@@ -21,20 +21,19 @@
     "layout": {
       "header": {
         "hidden": false,
-        "height": "100px",
+        "height": "auto",
         "collapsed": false,
         "blocks": [
           {
-            "type": "text",
-            "id": "dashboard-intro",
-            "content": "Selecciona cualquier elemento de tu organización y descubre qué utiliza, de qué depende y qué contenidos podrían verse afectados por un cambio.",
-            "format": "plain"
+            "type": "customMount",
+            "id": "inventory-indicators",
+            "title": "Resumen del inventario"
           }
         ]
       },
       "left": {
         "hidden": false,
-        "width": "390px",
+        "width": "48.9%",
         "title": "Inventario",
         "collapsed": false,
         "blocks": [
@@ -48,7 +47,7 @@
       },
       "right": {
         "hidden": false,
-        "width": "540px",
+        "width": "49%",
         "title": "Análisis de linaje",
         "collapsed": false,
         "blocks": [
@@ -73,7 +72,7 @@
           {
             "type": "text",
             "id": "architecture-note",
-            "content": "Fuente: ArcGIS Online · Lectura mediante la sesión autenticada · Sin mapa ni controles cartográficos.",
+            "content": "Fuente: ArcGIS Online · Contenido accesible de la organización según los permisos de tu sesión · Exploración de solo lectura.",
             "format": "plain"
           }
         ]
@@ -104,10 +103,26 @@
         "installedAt": "2026-10-29T14:53:36.930Z"
       },
       {
+        "id": "inventory-indicators",
+        "label": "Resumen independiente del contenido accesible",
+        "bundlePath": "./runtime/behaviors/inventory-indicators-0e5609ec70c61a51.js",
+        "sourceSha256": "0e5609ec70c61a51039a7088e137b02f4202e40c2679d01c68f415713b703c08",
+        "modulePaths": [
+          "esri/portal/Portal"
+        ],
+        "config": {},
+        "mounts": [
+          "inventory-indicators"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-11-05T09:52:31.487Z"
+      },
+      {
         "id": "content-assistant",
-        "label": "Asistente de consultas de contenido en lenguaje natural",
-        "bundlePath": "./runtime/behaviors/content-assistant-c107d3ce89943e17.js",
-        "sourceSha256": "c107d3ce89943e17514600cf9a8949da69e182398b0bb7581cfa97ccd1d1e936",
+        "label": "Asistente de contenido con panel independiente",
+        "bundlePath": "./runtime/behaviors/content-assistant-6996758957d140fb.js",
+        "sourceSha256": "6996758957d140fb969aea4f0dd8877c225b47466310cc301bed7835c15ce2f8",
         "modulePaths": [
           "esri/portal/Portal"
         ],
@@ -115,12 +130,11 @@
           "resultLimit": 8
         },
         "mounts": [
-          "content-assistant",
-          "dependency-explorer"
+          "content-assistant"
         ],
         "ownedLayerIds": [],
         "interactions": [],
-        "installedAt": "2026-10-29T15:00:46.608Z"
+        "installedAt": "2026-11-05T09:53:01.934Z"
       }
     ]
   },
